@@ -25,7 +25,10 @@ SECRET_KEY = 'e((4v5q!m^p53glao&fnu6@q9eor%!&nln890flh428hlvas!a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+#Get allowed host
+allowedFile = open("/home/ubuntu/hostname.txt", 'r')
+ALLOWED_HOSTS = [allowedFile.read()]
+allowedFile.close()
 
 
 # Application definition
